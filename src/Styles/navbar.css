@@ -1,0 +1,46 @@
+/* Navigation styles */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+/* Brand styles */
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Links container styles */
+.links {
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Link styles */
+.link {
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+/* Active link styles */
+.active-link {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Optional: Hover state for links */
+.link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
