@@ -1,20 +1,42 @@
-/* Page styles */
+/* Main page container */
 .page {
-  max-width: 640px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Title styles */
+/* Main title */
 .title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  color: #1f2937;
+  margin-bottom: 1rem;
 }
 
-/* Text styles */
 .text {
-  color: #6b7280;
-  line-height: 1.6;
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.highlight {
+  color: #f97316;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page {
+    padding: 4rem 1.5rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
 }
