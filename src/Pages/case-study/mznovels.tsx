@@ -328,7 +328,7 @@ export default function MZNovels() {
           <p>
             {" "}
             I considered switching to Cloudflare for better protection, but the
-            global outage on November 18, 2025 made me hesitate — Which made me preferred to
+            global outage on November 18, 2025 made me hesitate — So I preferred to
             keep traffic handling in-house for full control and avoid adding an
             external dependency in the critical path. Instead, I stuck with
             handling it myself: widened Nginx rate limiting rules, tightened IP
