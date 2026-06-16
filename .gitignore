@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+public/docs
+public/mznovels-docs/domain-purchase.pdf
