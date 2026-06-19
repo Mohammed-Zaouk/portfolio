@@ -273,6 +273,60 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* RedactMZ */}
+          <div className="card projects__section redact__MZ">
+            <div className="card__header-row">
+              <div className="card__header-left">
+                <div className="card__title-row">
+                  <h3 className="card__name">RedactMZ</h3>
+                  <span className="card__title-sep">|</span>
+                  <p className="card__subtitle">
+                    {t.projectDetails.redactmz.subtitle}
+                  </p>
+                </div>
+              </div>
+              <div className="card__header-right">
+                <a
+                  href="https://www.redactmz.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="card__link"
+                >
+                  redactmz.com ↗
+                </a>
+                <span className="card__link-sep">·</span>
+                <a
+                  href="https://github.com/Mohammed-Zaouk/RedactMZ"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="card__repo-link"
+                >
+                  GitHub Repo ↗
+                </a>
+              </div>
+            </div>
+
+            <div className="card__tags">
+              {t.projectDetails.redactmz.tags.map((tag, i) => (
+                <span
+                  key={tag}
+                  className={
+                    i === 0 ? "card__tag" : "card__tag card__tag--muted"
+                  }
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <p className="card__stack">JavaScript · HTML5 Canvas</p>
+            <ul className="card__list">
+              {t.projectDetails.redactmz.list.map((item, i) => (
+                <li key={i}>{renderHighlighted(item)}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 

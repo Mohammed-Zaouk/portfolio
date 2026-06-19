@@ -44,6 +44,11 @@ export interface Translations {
       tags: string[];
       list: string[];
     };
+    redactmz: {
+      subtitle: string;
+      tags: string[];
+      list: string[];
+    };
   };
   workExperience: {
     role: string;
@@ -136,6 +141,16 @@ const en: Translations = {
         "Managed deployment infrastructure using Docker, Nginx, and Linux servers.",
         "Optimized application performance, database operations, and user retention.",
         "Successfully implemented monetization and platform growth strategies.",
+      ],
+    },
+    redactmz: {
+      subtitle: "Client-Side PDF Redaction Tool",
+      tags: ["Privacy-First", "Open Source"],
+      list: [
+        'Needed to redact sensitive information from PDF documents before adding them to this portfolio, and found that the only existing options were paid services or "free" tools that uploaded the file to a third-party server to process it.',
+        "Built a tool that runs **entirely in the browser**, so the PDF never leaves the user's device — no backend, no upload step, no third party ever sees the file.",
+        "Implemented PDF rendering, canvas-based redaction, and PDF generation from scratch in plain JavaScript, as a way to understand how PDFs actually work under the hood rather than relying on a library that abstracts it all away.",
+        "Deployed and maintained as a free, open-source tool.",
       ],
     },
   },
@@ -284,6 +299,16 @@ const fr: Translations = {
         "Mise en place d'une stratégie de monétisation et de croissance de la plateforme.",
       ],
     },
+    redactmz: {
+      subtitle: "Outil de rédaction de PDF côté client",
+      tags: ["Respect de la vie privée", "Open Source"],
+      list: [
+        "Besoin de masquer des informations sensibles dans des documents PDF avant de les intégrer à ce portfolio, et constat que les seules options disponibles étaient des services payants ou des outils « gratuits » qui envoient le fichier à un serveur tiers pour le traiter.",
+        "Développement d'un outil fonctionnant **entièrement dans le navigateur** : le PDF ne quitte jamais l'appareil de l'utilisateur, sans backend, sans étape d'upload, et sans qu'aucun tiers n'ait accès au fichier.",
+        "Implémentation du rendu PDF, de la rédaction via canvas et de la génération de PDF entièrement en JavaScript natif, pour comprendre le fonctionnement réel des PDF plutôt que de dépendre d'une bibliothèque qui masque tout ce travail.",
+        "Déployé et maintenu en tant qu'outil gratuit et open source.",
+      ],
+    },
   },
   workExperience: {
     role: "Opérateur Technique",
@@ -430,6 +455,17 @@ const ar: Translations = {
         "تنفيذ استراتيجيات تحقيق الدخل ونمو المنصة بنتائج ملموسة.",
       ],
     },
+    redactmz: {
+      subtitle:
+        "أداة لحجب المعلومات الحساسة في ملفات PDF تعمل بالكامل من جهة المستخدم",
+      tags: ["خصوصية كاملة", "مفتوح المصدر"],
+      list: [
+        "احتجت إلى حجب معلومات حساسة من ملفات PDF قبل إضافتها إلى هذا الموقع، فوجدت أن الخيارات المتاحة كانت إما مدفوعة أو أدوات «مجانية» ترفع الملف إلى خادم خارجي لمعالجته.",
+        "تطوير أداة تعمل **بالكامل داخل المتصفح**، فلا يغادر ملف PDF جهاز المستخدم أبدًا، دون خادم أو خطوة رفع، ودون أن يصل الملف إلى أي طرف ثالث.",
+        "بناء عمليات عرض PDF، والتعتيم عبر Canvas، وتوليد الملف من الصفر بلغة JavaScript خام، كطريقة لفهم كيفية عمل ملفات PDF فعليًا بدلًا من الاعتماد على مكتبة جاهزة تخفي كل هذا التعقيد.",
+        "نشر وصيانة الأداة كمشروع مجاني ومفتوح المصدر.",
+      ],
+    },
   },
   workExperience: {
     role: "منسق تقني",
@@ -574,6 +610,16 @@ const ja: Translations = {
         "Docker・Nginx・Linuxサーバーによるデプロイ基盤を構築・運用。",
         "アプリパフォーマンス・DBクエリ・ユーザー継続率を継続的に改善。",
         "収益化施策とプラットフォーム成長戦略を立案・実施。",
+      ],
+    },
+    redactmz: {
+      subtitle: "完全クライアントサイドのPDF墨消しツール",
+      tags: ["プライバシー重視", "オープンソース"],
+      list: [
+        "ポートフォリオに掲載するPDFから機密情報を隠す必要があり、調べてみたところ既存の選択肢は有料サービスか、ファイルを第三者サーバーにアップロードして処理する「無料」ツールしかなかった。",
+        "**完全にブラウザ内で動作**するツールを開発し、PDFファイルがユーザーの端末から一切外に出ない仕組みにした（バックエンドなし、アップロードなし、第三者がファイルを見ることもない）。",
+        "PDFのレンダリング、Canvasによる墨消し処理、PDF生成を、既存のライブラリに頼らず素のJavaScriptでゼロから実装し、PDFの仕組みを実際に理解するための学習にもした。",
+        "無料・オープンソースのツールとして公開・運用中。",
       ],
     },
   },
