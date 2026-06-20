@@ -100,7 +100,7 @@ const en: Translations = {
   hero: {
     role: "Full-Stack Software Engineer · Morocco 🇲🇦",
     summary:
-      "Full-Stack Software Engineer with 4+ years of experience building production apps serving **100K+ users**, **4M+ total page views**, and **50K+ mobile installs**. Experienced across frontend, backend, databases, infrastructure, and AI integration.",
+      "Full-Stack Software Engineer with experience building production apps serving **100K+ users**, **4M+ total page views**, and **50K+ mobile installs**. Experienced across frontend, backend, databases, infrastructure, and AI integration.",
     stats: {
       users: "Users",
       monthlyViews: "Monthly Views",
@@ -256,7 +256,7 @@ const fr: Translations = {
   hero: {
     role: "Ingénieur Full-Stack · Maroc 🇲🇦",
     summary:
-      "Ingénieur full-stack avec plus de 4 ans d'expérience sur des applications en production : **+100 000 utilisateurs**, **+4 millions de pages vues** et **+50 000 installations mobiles**. À l'aise sur toute la chaîne : frontend, backend, bases de données, infrastructure et intégration IA.",
+      "Ingénieur full-stack avec expérience sur des applications en production : **+100 000 utilisateurs**, **+4 millions de pages vues** et **+50 000 installations mobiles**. À l'aise sur toute la chaîne : frontend, backend, bases de données, infrastructure et intégration IA.",
     stats: {
       users: "Utilisateurs",
       monthlyViews: "Vues / mois",
@@ -412,7 +412,7 @@ const ar: Translations = {
   hero: {
     role: "مهندس برمجيات Full-Stack · المغرب 🇲🇦",
     summary:
-      "مهندس برمجيات Full-Stack بخبرة تجاوزت 4 سنوات في بناء تطبيقات إنتاجية حقيقية: **أكثر من 100 ألف مستخدم**، **4 ملايين مشاهدة للصفحات**، و**50 ألف تثبيت** على الهاتف. خبرة شاملة تغطي الواجهات، الخوادم، قواعد البيانات، البنية التحتية، ودمج الذكاء الاصطناعي.",
+      "مهندس برمجيات Full-Stack بخبرة في بناء تطبيقات إنتاجية حقيقية: **أكثر من 100 ألف مستخدم**، **4 ملايين مشاهدة للصفحات**، و**50 ألف تثبيت** على الهاتف. خبرة شاملة تغطي الواجهات، الخوادم، قواعد البيانات، البنية التحتية، ودمج الذكاء الاصطناعي.",
     stats: {
       users: "مستخدم",
       monthlyViews: "مشاهدات شهرية",
@@ -569,7 +569,7 @@ const ja: Translations = {
   hero: {
     role: "フルスタックエンジニア · モロッコ 🇲🇦",
     summary:
-      "本番環境で稼働するアプリを4年以上構築してきたフルスタックエンジニアです。累計**10万人以上のユーザー**、**400万以上のページビュー**、**5万件以上のモバイルインストール**を達成。フロントエンドからバックエンド、データベース、インフラ、AI連携まで幅広く対応しています。",
+      "本番環境で稼働するアプリを構築してきたフルスタックエンジニアです。累計**10万人以上のユーザー**、**400万以上のページビュー**、**5万件以上のモバイルインストール**を達成。フロントエンドからバックエンド、データベース、インフラ、AI連携まで幅広く対応しています。",
     stats: {
       users: "ユーザー数",
       monthlyViews: "月間PV",
