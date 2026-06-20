@@ -1,6 +1,7 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../Styles/navbar.css";
+import myLogo from "../assets/logo/mz_logo.png"
 import { useLanguage } from "../Context/language";
 import type { Language } from "../Context/language";
 
@@ -121,7 +122,7 @@ export default function Navbar() {
       <nav className="nav">
         <NavLink to="/" className="brand">
           <img
-            src="/src/assets/logo/mz_logo.png"
+            src={myLogo}
             alt="MZ"
             className="brand-logo"
           />

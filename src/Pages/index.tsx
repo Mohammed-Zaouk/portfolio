@@ -1,4 +1,5 @@
 import "../Styles/index.css";
+import myImage from "../assets/images/my_image.png";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../Context/language";
 
@@ -41,7 +42,7 @@ export default function Home() {
         <div className="hero__left">
           <div className="hero__img-wrap">
             <img
-              src="/src/assets/images/my_image.png"
+              src={myImage}
               alt="Mohammed Zaouk"
               className="hero__img"
             />
