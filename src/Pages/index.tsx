@@ -123,7 +123,11 @@ export default function Home() {
 
           <p className="hero__cta">
             {t.hero.ctaText}
-            <a href="mailto:me@zaouk.dev" className="hero__cta-link">
+            <a
+              href="https://linkedin.com/in/Mohammed-Zaouk"
+              target="_blank"
+              className="hero__cta-link"
+            >
               {t.hero.ctaLink}
             </a>
           </p>
