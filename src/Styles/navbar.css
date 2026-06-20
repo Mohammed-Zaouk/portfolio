@@ -313,6 +313,7 @@
    2. Tablet land. ≤ 1023px
    3. Tablet port. ≤  767px
    4. Mobile       ≤  599px
+   5. Small phone  ≤  380px
 ----------------------------------------------------------------------- */
 
 /* 1. Laptop (≤ 1279px) */
@@ -429,5 +430,38 @@
     margin-right: auto;
     padding-right: 0;
     border-right: none;
+  }
+}
+
+/* 5. Small phone (≤ 380px) */
+@media (max-width: 380px) {
+  .nav {
+    padding: 0 0.6rem;
+    height: 48px;
+    gap: 0.35rem;
+  }
+
+  .brand-logo {
+    height: 36px;
+  }
+
+  .lang-switcher {
+    gap: 0.1rem;
+    margin-left: 0.3rem;
+    padding-left: 0.3rem;
+  }
+
+  [dir="rtl"] .lang-switcher {
+    margin-right: 0.3rem;
+    padding-right: 0.3rem;
+  }
+
+  .lang-btn {
+    padding: 0.2rem 0.3rem;
+    font-size: 0.62rem;
+  }
+
+  .lang-fade__label {
+    font-size: 0.62rem;
   }
 }

@@ -5,7 +5,6 @@
   justify-content: center;
   padding: 2rem;
 }
-
 .notfound__inner {
   display: flex;
   align-items: center;
@@ -18,7 +17,6 @@
   padding: 3rem 3.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 }
-
 .notfound__code {
   font-size: 7rem;
   font-weight: 900;
@@ -28,34 +26,29 @@
   opacity: 0.9;
   user-select: none;
 }
-
 .notfound__divider {
   width: 1px;
   height: 100px;
   background: rgba(0, 0, 0, 0.12);
   flex-shrink: 0;
 }
-
 .notfound__content {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
-
 .notfound__title {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: #1f2937;
 }
-
 .notfound__text {
   font-size: 0.95rem;
   color: #6b7280;
   line-height: 1.6;
   max-width: 260px;
 }
-
 .notfound__btn {
   margin-top: 0.75rem;
   display: inline-flex;
@@ -71,12 +64,52 @@
   width: fit-content;
   transition: background 0.3s ease-in-out;
 }
-
 .notfound__btn:hover {
   background: #c96a00;
 }
-
 /* ─── Responsive ─────────────────────────────────────────────────────────────── */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .notfound__inner {
+    gap: 2rem;
+    padding: 2.75rem 3rem;
+  }
+
+  .notfound__code {
+    font-size: 6rem;
+  }
+
+  .notfound__divider {
+    height: 90px;
+  }
+}
+
+/* Small tablet / large phone landscape (≤ 768px) */
+@media (max-width: 768px) {
+  .notfound {
+    padding: 1.5rem;
+  }
+
+  .notfound__inner {
+    gap: 1.75rem;
+    padding: 2.5rem 2.5rem;
+  }
+
+  .notfound__code {
+    font-size: 5.5rem;
+  }
+
+  .notfound__divider {
+    height: 80px;
+  }
+
+  .notfound__text {
+    max-width: 220px;
+  }
+}
+
+/* Mobile (≤ 560px) */
 @media (max-width: 560px) {
   .notfound__inner {
     flex-direction: column;
@@ -84,21 +117,48 @@
     padding: 2.5rem 2rem;
     gap: 1.5rem;
   }
-
   .notfound__divider {
     width: 60px;
     height: 1px;
   }
-
   .notfound__code {
     font-size: 5rem;
   }
-
   .notfound__btn {
     align-self: center;
   }
-
   .notfound__text {
     max-width: 100%;
+  }
+}
+
+/* Small phone (≤ 380px) */
+@media (max-width: 380px) {
+  .notfound {
+    padding: 1rem;
+  }
+
+  .notfound__inner {
+    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .notfound__code {
+    font-size: 3.75rem;
+  }
+
+  .notfound__title {
+    font-size: 1.25rem;
+  }
+
+  .notfound__text {
+    font-size: 0.875rem;
+  }
+
+  .notfound__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
   }
 }
