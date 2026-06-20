@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Styles/not_found.css";
+import "../styles/not_found.css";
 import { useLanguage } from "../Context/language";
 
 const notFoundText = {
