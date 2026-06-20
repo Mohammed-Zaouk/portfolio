@@ -1,20 +1,40 @@
 import "../../Styles/case-study.css";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../Context/language";
+import { dawamzTranslations } from "../../Context/dawamz.translations";
+
+/**
+ * Renders a string that may contain **bold** markers as React nodes,
+ * wrapping the bolded span in the same `.highlight` styling the design
+ * already uses for "50,000+ installs" etc.
+ */
+function renderWithHighlight(text: string) {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <span className="highlight" key={i}>
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    ),
+  );
+}
 
 export default function DawaMZ() {
-  const { dir } = useLanguage();
+  const { language } = useLanguage();
+  const t = dawamzTranslations[language];
 
   return (
     <article className="case-study">
-      {/* — Back link */}
+      {/* Back link */}
       <Link to="/#projects" className="case-study__back">
-        {dir === "rtl" ? "→ العودة" : "← Back"}
+        {t.backLink}
       </Link>
 
-      {/* — Header */}
+      {/* Header */}
       <header className="cs-header" id="cs-overview">
-        <span className="cs-header__eyebrow">Case Study</span>
+        <span className="cs-header__eyebrow">{t.eyebrow}</span>
         <div className="cs-header__title-row">
           <img
             src="/dawamz-docs/dawamz-logo.png"
@@ -23,12 +43,7 @@ export default function DawaMZ() {
           />
           <h1 className="cs-header__title">DawaMZ</h1>
         </div>
-        <p className="cs-header__subtitle">
-          Find the nearest open pharmacy in Morocco, right now. A multilingual
-          pharmacy finder shipped as a native mobile app and a companion
-          website, with <span className="highlight">50,000+ installs</span> on
-          the Play Store.
-        </p>
+        <p className="cs-header__subtitle">{renderWithHighlight(t.subtitle)}</p>
         <div className="cs-header__links">
           <a
             href="https://www.dawamz.com"
@@ -48,96 +63,60 @@ export default function DawaMZ() {
             Play Store ↗
           </a>
           <span className="cs-header__sep">·</span>
-          <span className="cs-header__repo-note">
-            The data scraper that keeps pharmacy schedules up to date is kept
-            private — it touches a third-party data source and I'd rather not
-            publish that pipeline. The app and web repos are public.
-          </span>
+          <span className="cs-header__repo-note">{t.repoNote}</span>
         </div>
         <div className="cs-header__tags">
-          <span className="cs-tag">React Native</span>
-          <span className="cs-tag">Expo</span>
-          <span className="cs-tag">React</span>
-          <span className="cs-tag">Vite</span>
-          <span className="cs-tag">Supabase</span>
-          <span className="cs-tag">MapLibre</span>
-          <span className="cs-tag">Solo Project</span>
+          {t.tags.map((tag) => (
+            <span className="cs-tag" key={tag}>
+              {tag}
+            </span>
+          ))}
         </div>
       </header>
 
-      {/* — Why I Built This */}
+      {/* Why I Built This */}
       <section className="cs-section" id="cs-why">
-        <h2 className="cs-section__title">Why I Built This</h2>
+        <h2 className="cs-section__title">{t.why.title}</h2>
         <div className="cs-section__body">
-          <p>
-            The idea had been in my head for a while. It started on a random day
-            when my mother asked me to go check which pharmacy was on call that
-            weekend. I thought — why do I have to go out in the heat to check
-            something I should be able to look up on my phone? Then it hit me:
-            is there even a way to do that?
-          </p>
-          <p>
-            So I checked. I found a few apps with broken UIs and expired data.
-            Since I was looking for a real project to work on after finishing
-            MZNovels, I decided to build it myself. This was my first project
-            built to solve an actual problem for people around me — and it set
-            the direction for what I want to keep building: digital versions of
-            services that don't have one yet.
-          </p>
+          {t.why.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
       </section>
 
-      {/* — What It Does */}
+      {/* What It Does */}
       <section className="cs-section" id="cs-what-it-does">
-        <h2 className="cs-section__title">What It Does</h2>
+        <h2 className="cs-section__title">{t.whatItDoes.title}</h2>
         <div className="cs-section__body">
-          <p>
-            DawaMZ finds the closest open or on-call pharmacy to a user's
-            location and gets them there — on a native app for the full
-            experience, and on the web for quick, shareable lookups.
-          </p>
+          <p>{t.whatItDoes.intro}</p>
 
           <div className="cs-feature-grid">
             <div className="cs-feature">
-              <h3 className="cs-feature__title">Core Features</h3>
+              <h3 className="cs-feature__title">
+                {t.whatItDoes.coreFeaturesTitle}
+              </h3>
               <ul className="cs-feature__list">
-                <li>GPS-based nearest open-pharmacy detection</li>
-                <li>
-                  Interactive map with light/dark tile styles matching the app
-                  theme
-                </li>
-                <li>
-                  Turn-by-turn routing, with a Google Maps fallback if no route
-                  is found
-                </li>
-                <li>
-                  Real-time open/closed status from weekly schedules, lunch
-                  breaks, night shifts, and on-call duty periods
-                </li>
-                <li>Tap-to-call and copy-address actions</li>
+                {t.whatItDoes.coreFeaturesList.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="cs-feature">
-              <h3 className="cs-feature__title">Platform Differences</h3>
+              <h3 className="cs-feature__title">
+                {t.whatItDoes.platformDiffTitle}
+              </h3>
               <ul className="cs-feature__list">
-                <li>
-                  <strong>Mobile</strong> — full native experience: GPS routing,
-                  offline-friendly UI, dark mode, tile fallback to OpenStreetMap
-                </li>
-                <li>
-                  <strong>Web</strong> — built for discoverability: SEO-friendly
-                  region → city → pharmacy pages with shareable URLs
-                </li>
-                <li>Both — Arabic (RTL), French, and English support</li>
-                <li>
-                  Both — community suggestions for missing pharmacies or cities
-                </li>
+                {t.whatItDoes.platformDiffList.map((item, i) => (
+                  <li key={i}>
+                    {item.label && <strong>{item.label}</strong>} {item.text}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
 
-        {/* — Device showcase */}
+        {/* Device showcase: web (laptop) + mobile app side by side */}
         <div className="cs-showcase">
           <div className="cs-device cs-device--laptop">
             <div className="cs-device__shell">
@@ -153,7 +132,9 @@ export default function DawaMZ() {
                 />
               </div>
             </div>
-            <span className="cs-device__caption">dawamz.com — desktop</span>
+            <span className="cs-device__caption">
+              {t.whatItDoes.desktopCaption}
+            </span>
           </div>
 
           <div className="cs-device cs-device--phone">
@@ -166,49 +147,34 @@ export default function DawaMZ() {
                 />
               </div>
             </div>
-            <span className="cs-device__caption">Mobile app — map view</span>
+            <span className="cs-device__caption">
+              {t.whatItDoes.mobileCaption}
+            </span>
           </div>
         </div>
       </section>
 
-      {/* — Two Platforms, One Backend */}
+      {/* Two Platforms, One Backend */}
       <section className="cs-section" id="cs-architecture">
-        <h2 className="cs-section__title">Two Platforms, One Backend</h2>
+        <h2 className="cs-section__title">{t.twoBackends.title}</h2>
         <div className="cs-section__body">
-          <p>
-            The mobile app and the website are two separate codebases — React
-            Native + Expo for mobile, React + Vite for web — but they share a
-            single Supabase project: same database, same schedule logic, same
-            multilingual content. A pharmacy's open/closed status, hours, and
-            translations are computed once and read by both platforms, so
-            there's one source of truth instead of two systems drifting apart.
-          </p>
-          <p>
-            This split let each platform focus on what it's actually good at.
-            Mobile owns the experience that benefits from native APIs — GPS,
-            maps, routing, offline-friendly UI, dark mode. Web owns
-            discoverability — SEO-friendly URLs per region, city, and pharmacy,
-            so a pharmacy page can be found and shared without installing
-            anything.
-          </p>
+          {t.twoBackends.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
       </section>
 
-      {/* — Keeping Pharmacy Data Fresh */}
+      {/* Keeping Pharmacy Data Fresh: scraping pipeline overview */}
       <section className="cs-section">
-        <h2 className="cs-section__title">Keeping Pharmacy Data Fresh</h2>
+        <h2 className="cs-section__title">{t.freshData.title}</h2>
         <div className="cs-section__body">
-          <p>
-            Pharmacy and on-call schedule data is the core of the app, and
-            keeping it current without manual upkeep was a priority from the
-            start. A scheduled job handles this automatically:
-          </p>
+          <p>{t.freshData.intro}</p>
 
           <div className="cs-tree">
             <div className="cs-tree__header">
               <span className="cs-tree__header-dot" />
               <span className="cs-tree__header-label">
-                Daily scraper pipeline
+                {t.freshData.pipelineLabel}
               </span>
             </div>
             <pre className="cs-tree__body">
@@ -222,59 +188,30 @@ export default function DawaMZ() {
             </pre>
           </div>
 
-          <p>
-            For pharmacies or cities the scraper doesn't cover yet, both
-            platforms include a suggestion system — users can submit a missing
-            pharmacy or request a new city directly from the app or website,
-            with rate limiting on the web form to prevent abuse. Anything
-            submitted this way is reviewed and added through direct Supabase
-            inserts.
-          </p>
+          <p>{t.freshData.outro}</p>
         </div>
       </section>
 
-      {/* — Technical Architecture */}
+      {/* Technical Architecture */}
       <section className="cs-section">
-        <h2 className="cs-section__title">Technical Architecture</h2>
+        <h2 className="cs-section__title">{t.architecture.title}</h2>
         <div className="cs-section__body">
-          <h3 className="cs-subheading">Mobile</h3>
-          <p>
-            Built with React Native and Expo (SDK 52) in TypeScript, using Expo
-            Router for file-based navigation. Maps run on MapLibre GL with
-            MapTiler for light and dark tile styles that match the app theme —
-            if MapTiler tiles fail to load, the app silently falls back to
-            OpenStreetMap so the map never breaks for the user. Routing is
-            computed via OSRM and drawn as a polyline on the map; if OSRM can't
-            find a route, the app falls back to opening Google Maps directly.
-          </p>
+          <h3 className="cs-subheading">{t.architecture.mobileTitle}</h3>
+          <p>{t.architecture.mobileText}</p>
 
-          <h3 className="cs-subheading">Web</h3>
-          <p>
-            Built with React 18, TypeScript, and Vite, styled with CSS Modules
-            and deployed on Vercel. Routing uses React Router v6 with
-            SEO-friendly slugs for the region → city → pharmacy hierarchy, and
-            directions hand off to Google Maps with one tap.
-          </p>
+          <h3 className="cs-subheading">{t.architecture.webTitle}</h3>
+          <p>{t.architecture.webText}</p>
 
-          <h3 className="cs-subheading">Shared Logic</h3>
-          <p>
-            The "is this pharmacy open right now" calculation — accounting for
-            weekly schedules, lunch breaks, night shifts, and on-call duty
-            periods — is implemented independently on each platform but against
-            the same underlying schedule data in Supabase, so both apps agree on
-            a pharmacy's status at any given moment.
-          </p>
+          <h3 className="cs-subheading">{t.architecture.sharedTitle}</h3>
+          <p>{t.architecture.sharedText}</p>
 
-          <h3 className="cs-subheading">Database</h3>
-          <p>
-            PostgreSQL via Supabase, with Row Level Security enabled on every
-            table. The public can read pharmacy and city data; writes go through
-            the scraper pipeline or the moderated suggestion system. Key tables
-            include <code>regions</code>, <code>cities</code>,{" "}
-            <code>pharmacies</code>, and <code>pharmacy_suggestions</code>.
-          </p>
+          <h3 className="cs-subheading">{t.architecture.dbTitle}</h3>
+          <p>{t.architecture.dbText}</p>
 
-          <h3 className="cs-subheading">Project Structure (Mobile)</h3>
+          {/* Mobile app folder structure */}
+          <h3 className="cs-subheading">
+            {t.architecture.structureMobileTitle}
+          </h3>
           <div className="cs-tree">
             <div className="cs-tree__header">
               <span className="cs-tree__header-dot" />
@@ -309,7 +246,8 @@ export default function DawaMZ() {
             </pre>
           </div>
 
-          <h3 className="cs-subheading">Project Structure (Web)</h3>
+          {/* Web app folder structure */}
+          <h3 className="cs-subheading">{t.architecture.structureWebTitle}</h3>
           <div className="cs-tree">
             <div className="cs-tree__header">
               <span className="cs-tree__header-dot" />
@@ -339,140 +277,59 @@ export default function DawaMZ() {
         </div>
       </section>
 
-      {/* — Challenges & Solutions */}
+      {/* Challenges & Solutions */}
       <section className="cs-section" id="cs-challenges">
-        <h2 className="cs-section__title">Challenges & Solutions</h2>
+        <h2 className="cs-section__title">{t.challenges.title}</h2>
         <div className="cs-section__body">
-          <h3 className="cs-subheading">Maps That Don't Break</h3>
-          <p>
-            From working on MZNovels, I learned that everything behind a paywall
-            has a free alternative — though nothing is truly free, and you have
-            to know where to spend and where not to. I wanted to avoid Google
-            Maps entirely because of the cost. My first attempt with React Maps
-            crashed even without using Google Maps directly — it turned out
-            React Maps calls the Google API under the hood and needs a key
-            regardless. So I ditched it and switched to the open-source{" "}
-            <code>@maplibre/maplibre-react-native</code>. It turned out
-            beautifully: MapTiler handles the styled tiles, OpenStreetMap is the
-            silent fallback if tiles fail, and OSRM handles routing with Google
-            Maps as the last-resort fallback if no route is found.
-          </p>
+          <h3 className="cs-subheading">{t.challenges.mapsTitle}</h3>
+          <p>{t.challenges.mapsText}</p>
 
-          <h3 className="cs-subheading">Schedule Logic Across Two Codebases</h3>
-          <p>
-            The trickiest part was keeping schedule logic consistent between the
-            Python scraper and the JavaScript/TypeScript frontends. The scraper
-            pulls fresh on-call data daily, but the format wasn't always
-            matching what the frontend expected. I had to define a shared
-            structure — essentially a contract between both codebases — so that
-            a pharmacy's hours display correctly whether you're on Android or
-            the web.
-          </p>
-          <p>
-            Edge cases made this harder than expected: <code>null</code> for
-            Sunday (many pharmacies are simply closed), multiple time slots in a
-            single day like morning and afternoon shifts, and overnight on-call
-            periods that span midnight. Each required careful parsing on both
-            ends to avoid silent bugs where a pharmacy would show as open when
-            it wasn't, or vice versa.
-          </p>
+          <h3 className="cs-subheading">{t.challenges.scheduleTitle}</h3>
+          {t.challenges.scheduleParagraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
       </section>
 
-      {/* — Results & Impact */}
+      {/* Results & Impact */}
       <section className="cs-section" id="cs-results">
-        <h2 className="cs-section__title">Results & Impact</h2>
+        <h2 className="cs-section__title">{t.results.title}</h2>
         <div className="cs-section__body">
           <div className="cs-stats">
-            <div className="cs-stat">
-              <span className="cs-stat__num">50K+</span>
-              <span className="cs-stat__label">Play Store Installs</span>
-            </div>
-            <div className="cs-stat">
-              <span className="cs-stat__num">99</span>
-              <span className="cs-stat__label">Cities Covered</span>
-            </div>
-            <div className="cs-stat">
-              <span className="cs-stat__num">10k+</span>
-              <span className="cs-stat__label">Pharmacies Tracked</span>
-            </div>
-            <div className="cs-stat">
-              <span className="cs-stat__num">6 months</span>
-              <span className="cs-stat__label">Live & Operating</span>
-            </div>
+            {t.results.stats.map((stat, i) => (
+              <div className="cs-stat" key={i}>
+                <span className="cs-stat__num">{stat.num}</span>
+                <span className="cs-stat__label">{stat.label}</span>
+              </div>
+            ))}
           </div>
-          <p>
-            The app reached 50,000+ installs on the Play Store purely through
-            organic discovery — no paid promotion, no marketing budget. Users
-            from across Morocco found it, rated it, and came back to it when
-            they needed it, which is exactly what the app was built for.
-          </p>
+          <p>{t.results.paragraph}</p>
         </div>
       </section>
 
-      {/* — What I'd Do Differently */}
+      {/* What I'd Do Differently */}
       <section className="cs-section">
-        <h2 className="cs-section__title">What I'd Do Differently</h2>
+        <h2 className="cs-section__title">{t.whatIdChange.title}</h2>
         <div className="cs-section__body">
           <ul className="cs-list">
-            <li>
-              Define the scraper output format as a strict schema from day one,
-              rather than letting it evolve and then having to retrofit the
-              frontend parser to match. A shared type definition — even just a
-              JSON schema — would have caught format mismatches before they
-              became runtime bugs.
-            </li>
-            <li>
-              Evaluate map libraries earlier in the process. Switching from
-              React Maps to MapLibre mid-build cost time that could have been
-              avoided with a short spike at the start to test rendering,
-              performance, and API key requirements before committing.
-            </li>
+            {t.whatIdChange.list.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </div>
       </section>
 
-      {/* — Tech Stack */}
+      {/* Tech Stack */}
       <section className="cs-section cs-section--last" id="cs-stack">
-        <h2 className="cs-section__title">Tech Stack</h2>
+        <h2 className="cs-section__title">{t.stack.title}</h2>
         <div className="cs-section__body">
           <div className="cs-stack-grid">
-            <div className="cs-stack-row">
-              <span className="cs-stack-row__label">Mobile</span>
-              <span className="cs-stack-row__value">
-                React Native, Expo (SDK 52), TypeScript, Expo Router
-              </span>
-            </div>
-            <div className="cs-stack-row">
-              <span className="cs-stack-row__label">Web</span>
-              <span className="cs-stack-row__value">
-                React 18, TypeScript, Vite, CSS Modules
-              </span>
-            </div>
-            <div className="cs-stack-row">
-              <span className="cs-stack-row__label">Backend / DB</span>
-              <span className="cs-stack-row__value">
-                Supabase (PostgreSQL + Row Level Security)
-              </span>
-            </div>
-            <div className="cs-stack-row">
-              <span className="cs-stack-row__label">Maps & Routing</span>
-              <span className="cs-stack-row__value">
-                MapLibre GL, MapTiler, OpenStreetMap, OSRM, Google Maps
-              </span>
-            </div>
-            <div className="cs-stack-row">
-              <span className="cs-stack-row__label">Automation</span>
-              <span className="cs-stack-row__value">
-                Python scraper on GitHub Actions (private)
-              </span>
-            </div>
-            <div className="cs-stack-row">
-              <span className="cs-stack-row__label">Distribution</span>
-              <span className="cs-stack-row__value">
-                EAS Build, Google Play, Vercel
-              </span>
-            </div>
+            {t.stack.rows.map((row, i) => (
+              <div className="cs-stack-row" key={i}>
+                <span className="cs-stack-row__label">{row.label}</span>
+                <span className="cs-stack-row__value">{row.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

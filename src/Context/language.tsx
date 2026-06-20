@@ -98,7 +98,7 @@ const en: Translations = {
     verification: "Verification",
   },
   hero: {
-    role: "Full-Stack Software Engineer · 4 Years of Experience · Morocco 🇲🇦",
+    role: "Full-Stack Software Engineer · Morocco 🇲🇦",
     summary:
       "Full-Stack Software Engineer with 4+ years of experience building production apps serving **100K+ users**, **4M+ total page views**, and **50K+ mobile installs**. Experienced across frontend, backend, databases, infrastructure, and AI integration.",
     stats: {
@@ -254,7 +254,7 @@ const fr: Translations = {
     verification: "Vérification",
   },
   hero: {
-    role: "Ingénieur Full-Stack · 4 ans d'expérience · Maroc 🇲🇦",
+    role: "Ingénieur Full-Stack · Maroc 🇲🇦",
     summary:
       "Ingénieur full-stack avec plus de 4 ans d'expérience sur des applications en production : **+100 000 utilisateurs**, **+4 millions de pages vues** et **+50 000 installations mobiles**. À l'aise sur toute la chaîne : frontend, backend, bases de données, infrastructure et intégration IA.",
     stats: {
@@ -410,7 +410,7 @@ const ar: Translations = {
     verification: "الوثائق",
   },
   hero: {
-    role: "مهندس برمجيات Full-Stack · 4 سنوات خبرة · المغرب 🇲🇦",
+    role: "مهندس برمجيات Full-Stack · المغرب 🇲🇦",
     summary:
       "مهندس برمجيات Full-Stack بخبرة تجاوزت 4 سنوات في بناء تطبيقات إنتاجية حقيقية: **أكثر من 100 ألف مستخدم**، **4 ملايين مشاهدة للصفحات**، و**50 ألف تثبيت** على الهاتف. خبرة شاملة تغطي الواجهات، الخوادم، قواعد البيانات، البنية التحتية، ودمج الذكاء الاصطناعي.",
     stats: {
@@ -567,7 +567,7 @@ const ja: Translations = {
     verification: "証明書類",
   },
   hero: {
-    role: "フルスタックエンジニア · 経験4年 · モロッコ 🇲🇦",
+    role: "フルスタックエンジニア · モロッコ 🇲🇦",
     summary:
       "本番環境で稼働するアプリを4年以上構築してきたフルスタックエンジニアです。累計**10万人以上のユーザー**、**400万以上のページビュー**、**5万件以上のモバイルインストール**を達成。フロントエンドからバックエンド、データベース、インフラ、AI連携まで幅広く対応しています。",
     stats: {
