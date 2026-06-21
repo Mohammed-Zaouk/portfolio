@@ -187,7 +187,7 @@ export const dawamzTranslations: Record<Language, DawamzContent> = {
         { num: "6 months", label: "Live & Operating" },
       ],
       paragraph:
-        "The app reached 50,000+ installs on the Play Store purely through organic discovery — no paid promotion, no marketing budget. Users from across Morocco found it, rated it, and came back to it when they needed it, which is exactly what the app was built for.",
+        "Growth was organic, supported only by a modest offline push: A4 flyers across my city, later expanded nationwide with help from family, friends, and a few local pharmacies. Users from across Morocco found it, rated it, and came back to it when they needed it, which is exactly what the app was built for.",
     },
 
     whatIdChange: {
@@ -335,7 +335,7 @@ export const dawamzTranslations: Record<Language, DawamzContent> = {
         { num: "6 mois", label: "En ligne et opérationnel" },
       ],
       paragraph:
-        "L'app a dépassé les 50 000 installations sur le Play Store par découverte organique uniquement, sans promotion payante ni budget marketing. Des utilisateurs de tout le Maroc l'ont trouvée, l'ont notée, et y sont revenus quand ils en avaient besoin — exactement ce pour quoi elle a été pensée.",
+        "La croissance s'est faite de façon organique, soutenue uniquement par une modeste campagne hors ligne : des flyers A4 distribués dans ma ville, puis étendus à l'échelle nationale avec l'aide de ma famille, d'amis et de quelques pharmacies locales. Des utilisateurs de tout le Maroc l'ont trouvée, l'ont notée, et y sont revenus quand ils en avaient besoin — exactement ce pour quoi elle a été pensée.",
     },
 
     whatIdChange: {
@@ -481,7 +481,7 @@ export const dawamzTranslations: Record<Language, DawamzContent> = {
         { num: "6 أشهر", label: "تشغيل مستمر" },
       ],
       paragraph:
-        "وصل التطبيق إلى أكثر من 50,000 عملية تثبيت على متجر Play باكتشاف عضوي بالكامل، بلا ترويج مدفوع ولا ميزانية تسويق. مستخدمون من كل أنحاء المغرب وجدوه، قيّموه، وعادوا إليه عند الحاجة، وهذا تمامًا ما صُمم من أجله.",
+        "كان النمو عضويًا، بدعم بسيط فقط من جهد غير رقمي: منشورات ورقية بحجم A4 وُزِّعت في مدينتي، ثم توسعت لتشمل المغرب كله بمساعدة العائلة والأصدقاء وبعض الصيدليات المحلية. مستخدمون من كل أنحاء المغرب وجدوه، قيّموه، وعادوا إليه عند الحاجة، وهذا تمامًا ما صُمم من أجله.",
     },
 
     whatIdChange: {
@@ -627,7 +627,7 @@ export const dawamzTranslations: Record<Language, DawamzContent> = {
         { num: "6ヶ月", label: "継続稼働" },
       ],
       paragraph:
-        "このアプリはPlayストアで5万件以上のインストールに達しましたが、それは全部オーガニックな発見によるものです。広告費もマーケティング予算も一切使っていません。モロッコ各地のユーザーがこのアプリを見つけて、評価をつけて、必要なときにまた使いに戻ってきてくれました。これはまさに、このアプリを作った理由そのものです。",
+        "成長は完全にオーガニックで、後押しになったのはささやかなオフラインの取り組みだけでした。自分の街でA4サイズのチラシを配り、その後家族や友人、いくつかの地元薬局の協力を得て全国規模に広げていきました。モロッコ各地のユーザーがこのアプリを見つけて、評価をつけて、必要なときにまた使いに戻ってきてくれました。これはまさに、このアプリを作った理由そのものです。",
     },
 
     whatIdChange: {

@@ -188,7 +188,7 @@ export const mznovelsTranslations: Record<Language, MznovelsContent> = {
       paragraph1:
         "Google Analytics recorded approximately **199K active users** and **4M page views** over the platform's lifetime. After analyzing the traffic patterns from the bot issue above, my best estimate is that around half the recorded users are real — so closer to **100K genuine users**, which actually lines up with where things were heading in the first six months before the bot traffic started.",
       paragraph2:
-        "The strongest signal that the platform was working? Average engagement time — **34 minutes per active user**, even during bot spam attacks. In clean conditions, that number regularly crossed **one hour** in the healthy period. This wasn't drive-by traffic — people sat down, read, returned for new chapters, and stayed. Growth was organic, supported only by a modest offline push: A4 flyers across my city, later expanded nationwide with help from family, friends, and a few local pharmacies.",
+        "The strongest signal that the platform was working? Average engagement time — **34 minutes per active user**, even during bot spam attacks. In clean conditions, that number regularly crossed **one hour** in the healthy period. This wasn't drive-by traffic — people sat down, read, returned for new chapters, and stayed.",
     },
 
     whatIdChange: {
@@ -351,7 +351,7 @@ export const mznovelsTranslations: Record<Language, MznovelsContent> = {
       paragraph1:
         "Google Analytics a comptabilisé environ **199 000 utilisateurs actifs** et **4 millions de pages vues** sur toute la durée de vie de la plateforme. En analysant les schémas de trafic liés au problème de bots décrit plus haut, mon estimation la plus probable est qu'environ la moitié de ces utilisateurs sont réels, soit plutôt **100 000 utilisateurs réels** — ce qui colle d'ailleurs assez bien avec la trajectoire des six premiers mois, avant l'arrivée des bots.",
       paragraph2:
-        "Le signal le plus parlant que la plateforme fonctionnait bien ? Le temps d'engagement moyen, **34 minutes par utilisateur actif**, même en pleine attaque de bots. Dans des conditions normales, ce chiffre dépassait régulièrement **une heure** durant la période saine. Ce n'était pas du trafic de passage : les gens s'installaient, lisaient, revenaient pour la suite, et restaient. Une croissance entièrement organique, portée par une promotion hors ligne toute simple : des flyers A4 distribués dans ma ville, puis étendus à l'échelle nationale grâce à ma famille, mes amis, et quelques pharmacies locales.",
+        "Le signal le plus parlant que la plateforme fonctionnait bien ? Le temps d'engagement moyen, **34 minutes par utilisateur actif**, même en pleine attaque de bots. Dans des conditions normales, ce chiffre dépassait régulièrement **une heure** durant la période saine. Ce n'était pas du trafic de passage : les gens s'installaient, lisaient, revenaient pour la suite, et restaient.",
     },
 
     whatIdChange: {
@@ -517,7 +517,7 @@ export const mznovelsTranslations: Record<Language, MznovelsContent> = {
       paragraph1:
         "سجّل Google Analytics ما يقارب **199 ألف مستخدم نشط** و**4 ملايين مشاهدة صفحة** طوال عمر المنصة. وبعد تحليل أنماط الترافيك الناتجة عن مشكلة البوتات أعلاه، أقدّر أن نصف هؤلاء المستخدمين تقريبًا حقيقيون، أي ما يقارب **100 ألف مستخدم حقيقي**، وهو رقم يتماشى فعليًا مع المسار الذي كانت المنصة تسلكه في الأشهر الستة الأولى قبل بدء البوتات.",
       paragraph2:
-        "وأقوى إشارة على أن المنصة كانت تعمل بنجاح؟ متوسط زمن التفاعل: **34 دقيقة لكل مستخدم نشط**، حتى في خضم هجمات البوتات. وفي الظروف الطبيعية، كان هذا الرقم يتجاوز **الساعة** بشكل منتظم خلال الفترة السليمة. لم تكن هذه زيارات عابرة؛ الناس كانوا يجلسون، يقرؤون، يرجعون للفصول الجديدة، ويستمرون. النمو كان عضويًا بالكامل، بدعم بسيط فقط من الترويج خارج الإنترنت: منشورات A4 في مدينتي، ثم توسّعت على المستوى الوطني بمساعدة العائلة والأصدقاء وبعض الصيدليات المحلية.",
+        "وأقوى إشارة على أن المنصة كانت تعمل بنجاح؟ متوسط زمن التفاعل: **34 دقيقة لكل مستخدم نشط**، حتى في خضم هجمات البوتات. وفي الظروف الطبيعية، كان هذا الرقم يتجاوز **الساعة** بشكل منتظم خلال الفترة السليمة. لم تكن هذه زيارات عابرة؛ الناس كانوا يجلسون، يقرؤون، يرجعون للفصول الجديدة، ويستمرون. النمو كان عضويًا بالكامل، ",
     },
 
     whatIdChange: {
@@ -677,7 +677,7 @@ export const mznovelsTranslations: Record<Language, MznovelsContent> = {
       paragraph1:
         "Google Analyticsの記録では、運用期間全体で約**19.9万人のアクティブユーザー**、**400万ページビュー**でした。上のボット問題のトラフィックパターンを分析した結果、記録上のユーザーのうち実際のユーザーはおそらく半分くらいだと見ています。つまり実数では**およそ10万人**で、これはボットが入り込む前の最初の6か月の伸び方ともだいたい一致します。",
       paragraph2:
-        "プラットフォームがちゃんと機能していたことを一番物語っているのは、平均エンゲージメント時間だと思います。ボットによるスパム攻撃の最中でも**アクティブユーザー1人あたり34分**。健全な時期に限れば、この数字は**1時間**を普通に超えていました。一瞬立ち寄って終わるようなトラフィックではなく、座って読んで、続きのために戻ってきて、また読む。そういう人たちでした。成長はすべて自然な口コミで、宣伝もごく地味なものだけでした。最初は自分の街でA4のチラシを配って、そこから家族や友人、近所の薬局にも手伝ってもらいながら全国に広げていきました。",
+        "プラットフォームがちゃんと機能していたことを一番物語っているのは、平均エンゲージメント時間だと思います。ボットによるスパム攻撃の最中でも**アクティブユーザー1人あたり34分**。健全な時期に限れば、この数字は**1時間**を普通に超えていました。一瞬立ち寄って終わるようなトラフィックではなく、座って読んで、続きのために戻ってきて、また読む。そういう人たちでした。",
     },
 
     whatIdChange: {

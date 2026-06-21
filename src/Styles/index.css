@@ -751,7 +751,11 @@
     gap: 1rem;
     padding: 1rem 1.25rem;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+  }
+
+  .hero__stat-divider {
+    display: none;
   }
 
   .hero__stat-num {
@@ -866,10 +870,6 @@
 
   .hero__stat-label {
     font-size: 0.6rem;
-  }
-
-  .hero__stat-divider {
-    height: 22px;
   }
 
   .hero__summary {
