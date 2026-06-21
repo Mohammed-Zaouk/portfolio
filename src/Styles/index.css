@@ -447,6 +447,14 @@
   justify-content: flex-end;
 }
 
+.card__arrow {
+  display: inline-block;
+}
+
+[dir="rtl"] .card__arrow {
+  transform: scaleX(-1);
+}
+
 .card__case-study-link {
   font-weight: 600;
   font-size: 0.95rem;

@@ -41,11 +41,7 @@ export default function Home() {
       <section id="home" className="page hero">
         <div className="hero__left">
           <div className="hero__img-wrap">
-            <img
-              src={myImage}
-              alt="Mohammed Zaouk"
-              className="hero__img"
-            />
+            <img src={myImage} alt="Mohammed Zaouk" className="hero__img" />
             <div className="hero__img-ring" />
             <div className="hero__img-glow" />
           </div>
@@ -211,7 +207,8 @@ export default function Home() {
 
             <div className="card__footer">
               <Link to="/case-study/dawamz" className="card__case-study-link">
-                {t.projectDetails.caseStudyLabel} →
+                {t.projectDetails.caseStudyLabel}{" "}
+                <span className="card__arrow">→</span>
               </Link>
             </div>
           </div>
@@ -274,7 +271,8 @@ export default function Home() {
 
             <div className="card__footer">
               <Link to="/case-study/mznovels" className="card__case-study-link">
-                {t.projectDetails.caseStudyLabel} →
+                {t.projectDetails.caseStudyLabel}{" "}
+                <span className="card__arrow">→</span>
               </Link>
             </div>
           </div>
